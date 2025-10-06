@@ -126,7 +126,7 @@ enum class MenuState { MAIN, RULES };
 bool showMenu(sf::RenderWindow& window) {
 	sf::Font menuFont;
 	if (!menuFont.loadFromFile("DejaVuSans-Bold.ttf")) {
-		MessageBoxA(nullptr, "Failed to load font", "Error", MB_ICONERROR);
+		//MessageBoxA(nullptr, "Failed to load font", "Error", MB_ICONERROR);
 		return false;
 	}
 
@@ -294,7 +294,7 @@ void showGameOver(sf::RenderWindow& window, const std::string& resultText, sf::F
 		window.draw(result);
 		window.display();
 
-		if (clock.getElapsedTime().asSeconds() > 10.f) {
+		if (clock.getElapsedTime().asSeconds() > 5.f) {
 			return;
 		}
 	}
